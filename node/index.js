@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
     else {
       res.writeHead(200, { "Content-type": "text/html; charset=utf-8" });
       files.forEach((f) => res.write(`${f} <br>`));
-      res.end("Listando os arquivo de uma pasta");
+      res.end("Listando os arquivo de pasta");
     }
   });
 });
