@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Es Modules</title>
+</head>
+<body>
+
+<h2>ES Modules</h2>
+  <p><strong>ES Modules (ECMAScript Modules):</strong> são um sistema de módulos nativo do JavaScript introduzido na especificação ECMAScript 6 (ES6). Eles fornecem uma maneira padrão de importar e exportar código entre diferentes arquivos JavaScript.</p>
+  <p><strong>Os módulos ES:</strong> permitem que os desenvolvedores organizem seu código em arquivos separados, dividindo-o em módulos independentes e reutilizáveis. Isso ajuda a melhorar a modularidade, legibilidade e manutenibilidade do código.</p>
+</body>
+</html>

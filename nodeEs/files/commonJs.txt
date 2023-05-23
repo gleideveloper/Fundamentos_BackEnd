@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CommonJS</title>
+</head>
+<body>
+
+<h2>CommonJS</h2>
+  <p><strong>O CommonJS (ou CJS):</strong> é um sistema de módulos para JavaScript que foi amplamente utilizado em ambientes de servidor, como o Node.js, antes da adoção generalizada dos módulos ES (ECMAScript) no navegador e em outros ambientes JavaScript.</p>
+  <p><strong>O CommonJS:</strong> é uma especificação que define um formato padrão para a estruturação de módulos JavaScript e a importação/exportação de código entre esses módulos. Ele permite que os desenvolvedores dividam seu código em módulos reutilizáveis e gerenciem as dependências entre esses módulos.</p>
+</body>
+</html>
