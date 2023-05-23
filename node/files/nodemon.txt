@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nodemon</title>
+</head>
+<body>
+
+<h2>Nodemon</h2>
+  <p><strong>Nodemon:</strong> é uma ferramenta desenvolvida para facilitar o desenvolvimento de aplicativos Node.js. É um utilitário de linha de comando que monitora os arquivos de um projeto Node.js em busca de alterações e reinicia automaticamente o servidor sempre que detecta uma modificação nos arquivos.</p>
+  <p>Quando você está desenvolvendo um aplicativo Node.js, geralmente precisa reiniciar manualmente o servidor sempre que faz alterações no código para ver as atualizações refletidas. O Nodemon resolve esse problema automatizando esse processo. Ele observa os arquivos do projeto em busca de alterações, incluindo arquivos JavaScript, JSON, templates, entre outros. Quando uma alteração é detectada, o Nodemon reinicia automaticamente o servidor, permitindo que você veja as alterações imediatamente sem precisar reiniciar manualmente.</p>
+</body>
+</html>

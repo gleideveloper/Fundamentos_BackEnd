@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Node JS</title>
+</head>
+<body>
+
+<h2>Node JS</h2>
+  <p><strong>Node JS:</strong> é um ambiente de tempo de execução de código aberto, construído sobre o motor JavaScript V8 do Google Chrome. Ele permite que os desenvolvedores executem código JavaScript no lado do servidor, em vez de serem restritos ao navegador.</p>
+  <p>Ao contrário do JavaScript tradicional, que é executado no navegador, o Node.js permite que os desenvolvedores construam aplicativos de servidor escaláveis e de alto desempenho. Ele utiliza um modelo de E/S não bloqueante e baseado em eventos para lidar com operações de entrada e saída assíncronas de forma eficiente.</p>
+</body>
+</html>

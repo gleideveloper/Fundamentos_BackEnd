@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Libary UV</title>
+</head>
+<body>
+
+<h2>Libary UV</h2>
+  <p><strong>A libuv:</strong> é uma biblioteca de plataforma de E/S de eventos multiplataforma em C, que fornece abstrações de E/S de baixo nível para sistemas operacionais. Ela é usada como uma camada de abstração para gerenciar operações de E/S assíncronas em sistemas operacionais, como manipulação de arquivos, soquetes de rede, eventos de temporizador e muito mais.</p>
+</body>
+</html>
