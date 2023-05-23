@@ -55,12 +55,6 @@ app.get("/style.css", async (req, res) => {
 
 app.get("/lorem", async (req, res) => {
   const numParagraphs = parseInt(req.query.numParagraphs);
-
-  if (isNaN(numParagraphs) || numParagraphs < 1 || numParagraphs > 10) {
-    res.status(400).send("Number of paragraphs must be between 1 and 10.");
-    return;
-  }
-
   const loremTexts = lorem.generateParagraphs(numParagraphs);
   const paragraphs = loremTexts.split("\n");
   console.log("paragraphs >", paragraphs);
