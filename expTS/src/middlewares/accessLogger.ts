@@ -14,7 +14,7 @@ interface LogFormat {
 
 function accessLogger(format: Tipo) {
   return (req: Request, res: Response, next: NextFunction) => {
-    const logFilePath = process.env.PATH_FILE_LOG ?? 'logs';
+    const logFilePath = process.env.PATH_FILE_LOG ?? './logs/access.log';
 
     const logData: LogFormat = {
       timestamp: new Date().toISOString(),

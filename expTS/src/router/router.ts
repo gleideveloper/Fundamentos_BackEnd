@@ -2,7 +2,7 @@ import { Router } from 'express';
 import mainController from '../controllers/main';
 
 const router = Router();
-
+router.get('/lorem', mainController.lorem);
 router.get('/log', mainController.log);
 router.get('/hb1', mainController.hb1);
 router.get('/hb2', mainController.hb2);

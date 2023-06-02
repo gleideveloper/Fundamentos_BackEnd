@@ -1,4 +1,3 @@
-import { fileURLToPath } from "url";
 import fs from "fs/promises";
 import path from "path";
 import dotenv from "dotenv";

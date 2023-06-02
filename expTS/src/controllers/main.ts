@@ -1,7 +1,18 @@
 import { Request, Response } from 'express';
+import { LoremIpsum } from 'lorem-ipsum';
+const loremIpsum = new LoremIpsum();
 
 const log = function (req: Request, res: Response) {
   res.send('Gravando os logs no arquivo access.log');
+};
+
+const lorem = async function (req: Request, res: Response) {
+  const numParagraphs = parseInt(req.query.numParagraphs as string);
+  const loremTexts = loremIpsum.generateParagraphs(numParagraphs);
+  const paragraphs = loremTexts.split('\n');
+  console.log('paragraphs >', paragraphs);
+  // Passa um objeto JSON paragraphs contendo o array de parágrafos
+  res.json(paragraphs);
 };
 
 const hb1 = function (req: Request, res: Response) {
@@ -51,4 +62,4 @@ const hb5 = function (req: Request, res: Response) {
   res.render('main/hb5', { technos });
 };
 
-export default { log, hb1, hb2, hb3, hb4, hb5 };
+export default { log, hb1, hb2, hb3, hb4, hb5, lorem };

@@ -30,6 +30,7 @@ generateBtn.addEventListener("click", async () => {
   }
 });
 
+//numero de paragafos deve ser: >= 1 <=10
 function isValidNumParagraphs(numParagraphs) {
   return !isNaN(numParagraphs) && numParagraphs >= 1 && numParagraphs <= 10;
 }
