@@ -5,14 +5,8 @@ import morgan from 'morgan';
 import accessLogger from './middlewares/accessLogger';
 import router from './router/router';
 import { engine } from 'express-handlebars';
-// import { LoremIpsum } from 'lorem-ipsum';
-const staticFilesPath = './public';
-// const lorem = new LoremIpsum();
-// const staticFilePaths = {
-//   index: `${staticFilesPath}/html/`,
-//   script: `${staticFilesPath}/js/`,
-//   style: `${staticFilesPath}/css/`,
-// };
+const pathRoot = process.cwd();
+import sass from 'node-sass-middleware';
 
 dotenv.config();
 validateEnv();
@@ -24,19 +18,23 @@ app.engine('handlebars', engine({ helpers: require('./views/helpers/helpers') })
 app.set('view engine', 'handlebars');
 app.set('views', `${__dirname}/views`);
 
-//Faz a mesma coisa das linhas 31 ~ 33
-app.use(express.static(staticFilesPath));
-// app.use('/html', express.static(staticFilePaths.index));
-// app.use('/js', express.static(staticFilePaths.script));
-// app.use('/css', express.static(staticFilePaths.style));
-// app.get('/lorem', async (req, res) => {
-//   // Verifica e converte o valor para número ou usa um valor padrão
-//   const numParagraphs = parseInt(req.query.numParagraphs as string);
-//   const loremTexts = lorem.generateParagraphs(numParagraphs);
-//   const paragraphs = loremTexts.split('\n');
-//   console.log('paragraphs >', paragraphs);
-//   res.json(paragraphs); // Retorna o ID e os parágrafos em um objeto JSON
-// });
+//  app.use(express.static(pathRoot));
+
+app.use(
+  sass({
+    src: `${pathRoot}/public/scss`,
+    dest: `${pathRoot}/public/css`,
+    outputStyle: 'compressed',
+    prefix: '/css',
+  }),
+);
+
+app.use('/css', express.static(`${pathRoot}/public/css`));
+app.use('/js', express.static(`${pathRoot}/node_modules/bootstrap/dist/js/`));
+app.use(
+  '/webfonts',
+  express.static(`${pathRoot}/node_modules/@fortawesome/fontawesome-free/webfonts`),
+);
 
 app.use(morgan('combined'));
 app.use(accessLogger('simples'));
