@@ -1,6 +1,8 @@
 import { Sequelize } from "sequelize-typescript";
 import { Funcionario } from "../models/Funcionario";
 import { Departamento } from "../models/Departamento";
+import { Dependente } from "../models/Dependente";
+import { Projeto } from "../models/Projeto";
 
 const connection = new Sequelize({
   dialect: "mysql",
@@ -9,7 +11,7 @@ const connection = new Sequelize({
   password: "Root@12345",
   database: "empresa",
   logging: false,
-  models: [Funcionario, Departamento],
+  models: [Funcionario, Departamento, Dependente, Projeto],
 });
 
 export default connection;

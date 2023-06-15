@@ -1,6 +1,17 @@
 import { Request, Response } from "express";
 import { Funcionario } from "../models/Funcionario";
 
+// Criar um novo funcionário
+const create = async (req: Request, res: Response): Promise<Response> => {
+  try {
+    const novoFuncionario: Funcionario = await Funcionario.create({ ...req.body });
+    return res.status(201).json(novoFuncionario);
+  } catch (error) {
+    console.log(error); // Imprime o log de erro no console
+    return res.status(500).json({ error: "Erro ao criar o funcionário." });
+  }
+};
+
 // Listar todos os funcionários
 const getAll = async (req: Request, res: Response): Promise<Response> => {
   try {
@@ -24,17 +35,6 @@ const getById = async (req: Request, res: Response): Promise<Response> => {
   } catch (error) {
     console.log(error); // Imprime o log de erro no console
     return res.status(500).json({ error: "Erro ao obter o funcionário." });
-  }
-};
-
-// Criar um novo funcionário
-const create = async (req: Request, res: Response): Promise<Response> => {
-  try {
-    const novoFuncionario: Funcionario = await Funcionario.create({ ...req.body });
-    return res.status(201).json(novoFuncionario);
-  } catch (error) {
-    console.log(error); // Imprime o log de erro no console
-    return res.status(500).json({ error: "Erro ao criar o funcionário." });
   }
 };
 

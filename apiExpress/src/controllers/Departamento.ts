@@ -1,6 +1,16 @@
 import { Request, Response } from "express";
 import { Departamento } from "../models/Departamento";
 
+// Criar um novo departamento
+const create = async (req: Request, res: Response): Promise<Response> => {
+  try {
+    const novoDepartamento: Departamento = await Departamento.create({ ...req.body });
+    return res.status(201).json(novoDepartamento);
+  } catch (error) {
+    return res.status(500).json({ error: "Erro ao criar o funcionário." });
+  }
+};
+
 // Obter uma lista de departamentos
 const getAll = async function (req: Request, res: Response): Promise<Response> {
   const departamentos: Array<Departamento> = await Departamento.findAll();
@@ -18,16 +28,6 @@ const getById = async (req: Request, res: Response): Promise<Response> => {
     return res.status(200).json(departamento);
   } catch (error) {
     return res.status(500).json({ error: "Erro ao obter o Departamento." });
-  }
-};
-
-// Criar um novo departamento
-const create = async (req: Request, res: Response): Promise<Response> => {
-  try {
-    const novoDepartamento: Departamento = await Departamento.create({ ...req.body });
-    return res.status(201).json(novoDepartamento);
-  } catch (error) {
-    return res.status(500).json({ error: "Erro ao criar o funcionário." });
   }
 };
 
