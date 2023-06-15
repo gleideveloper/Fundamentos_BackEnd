@@ -1,14 +1,14 @@
 import { Router } from "express";
-import FuncionarioRouter from "./FuncionarioRouter";
-import DepartamentoRouter from "./DepartamentoRouter";
-import DependenteRouter from "./DependenteRouter";
-import ProjetoRouter from "./ProjetoRouter";
+import funcionarioRouter from "./FuncionarioRouter";
+import departamentoRouter from "./DepartamentoRouter";
+import dependenteRouter from "./DependenteRouter";
+import projetoRouter from "./ProjetoRouter";
 
 const router = Router();
 
-router.use(FuncionarioRouter);
-router.use(DepartamentoRouter);
-router.use(DependenteRouter);
-router.use(ProjetoRouter);
+router.use(funcionarioRouter);
+router.use(departamentoRouter);
+router.use(dependenteRouter);
+router.use(projetoRouter);
 
 export default router;
