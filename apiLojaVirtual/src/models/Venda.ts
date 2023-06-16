@@ -16,6 +16,7 @@ import {
 
 import { Produto } from "./Produto";
 import { Cliente } from "./Cliente";
+import { VendaProduto } from "./VendaProduto";
 
 @Table({ timestamps: true })
 export class Venda extends Model<Venda> {
@@ -29,14 +30,13 @@ export class Venda extends Model<Venda> {
   @Column({ type: DataType.UUID })
   clienteId!: string;
 
+  @AllowNull(false)
+  @Column(DataType.DATE)
+  data!: Date;
+
   @BelongsTo(() => Cliente)
   cliente!: Cliente;
 
-  // @ForeignKey(() => Produto)
-  // @AllowNull(true)
-  // @Column({ type: DataType.UUID })
-  // produtoId!: string;
-
   @BelongsToMany(() => Produto, () => VendaProduto)
-  produto!: Produto[];
+  produtos!: Produto[];
 }

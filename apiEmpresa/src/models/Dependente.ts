@@ -9,6 +9,7 @@ import {
   Unique,
   ForeignKey,
   HasOne,
+  BelongsTo,
 } from "sequelize-typescript";
 
 import { Funcionario } from "./Funcionario";
@@ -34,6 +35,6 @@ export class Dependente extends Model<Dependente> {
   @Column({ type: DataType.UUID })
   funcionarioId!: string;
 
-  @HasOne(() => Funcionario)
+  @BelongsTo(() => Funcionario)
   funcionario!: Funcionario;
 }

@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { Produto } from "../models/Produto";
+import { VendaProduto } from "../models/VendaProduto";
 
 // Criar um novo produto
 const create = async (req: Request, res: Response): Promise<Response> => {

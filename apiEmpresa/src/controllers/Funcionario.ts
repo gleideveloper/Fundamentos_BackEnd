@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import { Funcionario } from "../models/Funcionario";
+import { Dependente } from "../models/Dependente";
+import { Departamento } from "../models/Departamento";
 
 // Criar um novo funcionário
 const create = async (req: Request, res: Response): Promise<Response> => {
@@ -15,7 +17,11 @@ const create = async (req: Request, res: Response): Promise<Response> => {
 // Listar todos os funcionários
 const getAll = async (req: Request, res: Response): Promise<Response> => {
   try {
-    const funcionarios: Array<Funcionario> = await Funcionario.findAll();
+    const funcionarios: { rows: Array<Funcionario>; count: number } =
+      await Funcionario.findAndCountAll({
+        include: [Dependente, Departamento],
+        // distinct: true,
+      });
     return res.status(200).json(funcionarios);
   } catch (error) {
     console.log(error); // Imprime o log de erro no console

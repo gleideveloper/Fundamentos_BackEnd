@@ -11,6 +11,7 @@ import {
   ForeignKey,
   HasMany,
   HasOne,
+  BelongsTo,
 } from "sequelize-typescript";
 import { Departamento } from "./Departamento";
 import { Dependente } from "./Dependente";
@@ -44,13 +45,8 @@ export class Funcionario extends Model<Funcionario> {
   @Column({ type: DataType.UUID })
   departamentoId!: string;
 
-  @HasOne(() => Departamento)
+  @BelongsTo(() => Departamento)
   departamento!: Departamento;
-
-  @ForeignKey(() => Dependente)
-  @AllowNull(true)
-  @Column({ type: DataType.UUID })
-  pependenteId!: string;
 
   @HasMany(() => Dependente)
   dependentes!: Dependente[];

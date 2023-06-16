@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { Departamento } from "../models/Departamento";
+import { Funcionario } from "../models/Funcionario";
 
 // Criar um novo departamento
 const create = async (req: Request, res: Response): Promise<Response> => {
@@ -13,7 +14,11 @@ const create = async (req: Request, res: Response): Promise<Response> => {
 
 // Obter uma lista de departamentos
 const getAll = async function (req: Request, res: Response): Promise<Response> {
-  const departamentos: Array<Departamento> = await Departamento.findAll();
+  const departamentos: { rows: Array<Departamento>; count: number } =
+    await Departamento.findAndCountAll({
+      include: [Funcionario],
+      distinct: true,
+    });
   return res.status(200).json(departamentos);
 };
 

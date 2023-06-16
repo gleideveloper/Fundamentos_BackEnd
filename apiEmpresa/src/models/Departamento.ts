@@ -41,9 +41,6 @@ export class Departamento extends Model<Departamento> {
   @BelongsTo(() => Funcionario, "gestorId")
   gestor!: Funcionario;
 
-  @HasMany(() => Funcionario)
-  funcionarios!: Funcionario[];
-
   @ForeignKey(() => Projeto)
   @AllowNull(true)
   @Column({ type: DataType.UUID })

@@ -17,6 +17,7 @@ import {
 
 import { Categoria } from "./Categoria";
 import { Venda } from "./Venda";
+import { VendaProduto } from "./VendaProduto";
 
 @Table({ timestamps: true })
 export class Produto extends Model<Produto> {
@@ -25,31 +26,19 @@ export class Produto extends Model<Produto> {
   @Column({ type: DataType.UUID, defaultValue: DataType.UUIDV1 })
   id!: string;
 
-  @AllowNull(true)
-  @Column({ type: DataType.STRING })
+  @Column(DataType.STRING)
   descricao!: string;
 
-  @AllowNull(true)
-  @Column({ type: DataType.DECIMAL(10, 2) })
+  @Column(DataType.DECIMAL(10, 2))
   preco!: number;
 
-  @AllowNull(true)
-  @Column({ type: DataType.NUMBER })
+  @Column(DataType.INTEGER)
   quantidade!: number;
 
   @ForeignKey(() => Categoria)
-  @AllowNull(true)
-  @Column({ type: DataType.UUID })
-  categoriaId!: string;
+  @Column(DataType.UUID)
+  categoriaId!: number;
 
   @BelongsTo(() => Categoria)
   categoria!: Categoria;
-
-  // @ForeignKey(() => Venda)
-  // @AllowNull(true)
-  // @Column({ type: DataType.UUID })
-  // vendaId!: string;
-
-  @BelongsToMany(() => Venda, () => ProdutoVenda)
-  vendas!: Venda[];
 }
