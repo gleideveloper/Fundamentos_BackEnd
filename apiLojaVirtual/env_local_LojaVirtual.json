@@ -1,0 +1,14 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "(Local Env)",
+    "dateExported": "2023-06-16T20:40:44.870Z",
+    "version": "1.0",
+    "global": true,
+    "local": true,
+    "variables": [
+        {
+            "name": "loja-virtual",
+            "value": "http://localhost:3000"
+        }
+    ]
+}

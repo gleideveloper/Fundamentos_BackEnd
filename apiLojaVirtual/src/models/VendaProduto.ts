@@ -19,9 +19,9 @@ import { Venda } from "./Venda";
 
 @Table({ timestamps: true })
 export class VendaProduto extends Model<VendaProduto> {
-  @IsUUID(4)
+  @IsUUID("all")
   @PrimaryKey
-  @Column(DataType.UUID)
+  @Column({ type: DataType.UUID, defaultValue: DataType.UUIDV1 })
   id!: string;
 
   @ForeignKey(() => Venda)
