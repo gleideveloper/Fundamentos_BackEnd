@@ -1,0 +1,358 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Empresa",
+    "dateExported": "2023-06-16T23:18:18.247Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "f9bd3a68-fab2-493b-8f53-3104618f95a6",
+            "name": "Departamento",
+            "containerId": "",
+            "created": "2023-06-16T22:10:24.369Z",
+            "sortNum": 5000
+        },
+        {
+            "_id": "638d8f61-bbf6-4984-9bb2-1113ec91e75c",
+            "name": "Funcionario",
+            "containerId": "",
+            "created": "2023-06-16T22:10:24.368Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "17607d71-3661-4eba-9e05-b97dc67e9ad4",
+            "name": "Dependente",
+            "containerId": "",
+            "created": "2023-06-16T22:10:24.371Z",
+            "sortNum": 15000
+        },
+        {
+            "_id": "78b0e8ec-eb7f-4b17-8e5b-2c0c1d827677",
+            "name": "Projeto",
+            "containerId": "",
+            "created": "2023-06-16T22:10:24.367Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "f419c213-53c7-4481-8670-3ac3aceadb44",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "78b0e8ec-eb7f-4b17-8e5b-2c0c1d827677",
+            "name": "createProjeto",
+            "url": "{{empresa}}/projeto/create",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-06-16T22:10:24.368Z",
+            "modified": "2023-06-16T22:44:42.413Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Treinamento Pessoal\",\n  \"departamentoId\": \"57b04cc0-0b13-11ee-afd5-d75687cbe916\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a636cfe8-cf3a-4636-8db1-b0aabf253913",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "17607d71-3661-4eba-9e05-b97dc67e9ad4",
+            "name": "createDependente",
+            "url": "{{empresa}}/dependente/create",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-06-16T22:10:24.369Z",
+            "modified": "2023-06-16T23:15:07.070Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Karina Monteiro\",\n  \"idade\": 36,\n  \"funcionarioId\": \"8efdb5a0-0b13-11ee-afd5-d75687cbe916\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a000efcc-f311-454c-bae0-641d77a39f50",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "638d8f61-bbf6-4984-9bb2-1113ec91e75c",
+            "name": "createFuncionario",
+            "url": "{{empresa}}/funcionario/create",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-06-16T22:10:24.370Z",
+            "modified": "2023-06-16T22:39:02.162Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Maria Rosa Vinente\",\n  \"fone\": \"92982554562\",\n  \"email\": \"mariarv@gmail.com\",\n  \"idade\": 56,\n  \"departamentoId\": \"57b04cc0-0b13-11ee-afd5-d75687cbe916\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "deaf9d2d-e894-4686-9433-a972d8b5564e",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "f9bd3a68-fab2-493b-8f53-3104618f95a6",
+            "name": "createDepartamento",
+            "url": "{{empresa}}/departamento/create",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-06-16T22:10:24.371Z",
+            "modified": "2023-06-16T22:25:27.827Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Administração\",\n  \"sigla\": \"Adm\",\n  \"gestorId\": null\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1816a956-7fe8-4d98-995b-0d52482062cc",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "17607d71-3661-4eba-9e05-b97dc67e9ad4",
+            "name": "getDependentes",
+            "url": "{{empresa}}/dependente/all",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2023-06-16T22:10:24.372Z",
+            "modified": "2023-06-16T22:10:24.372Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "50e4098e-3aaa-4542-9e3c-ebf35620170e",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "17607d71-3661-4eba-9e05-b97dc67e9ad4",
+            "name": "getDependente",
+            "url": "{{empresa}}/dependente/1f4f3250-0b05-11ee-b0ed-c50c7a90f374",
+            "method": "GET",
+            "sortNum": 8750,
+            "created": "2023-06-16T22:10:24.373Z",
+            "modified": "2023-06-16T22:10:24.373Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "038350c1-7835-47d6-a0c4-deaa5f38b334",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "17607d71-3661-4eba-9e05-b97dc67e9ad4",
+            "name": "updateDependente",
+            "url": "{{empresa}}/dependente/1f4f3250-0b05-11ee-b0ed-c50c7a90f374",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2023-06-16T22:10:24.374Z",
+            "modified": "2023-06-16T22:10:24.374Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Departamento Tecnologia da Informação\",\n  \"sigla\": \"TI\",\n  \"gestorId\": \"5f4ee7a0-0b06-11ee-b0ed-c50c7a90f374\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e5601ade-1db3-4d79-acbf-c4fe60a696ee",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "78b0e8ec-eb7f-4b17-8e5b-2c0c1d827677",
+            "name": "getProjetos",
+            "url": "{{empresa}}/projeto/all",
+            "method": "GET",
+            "sortNum": 12500,
+            "created": "2023-06-16T22:10:24.375Z",
+            "modified": "2023-06-16T22:11:58.771Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f913c6bf-fd34-4dbb-b28d-e5ff8fbb55ad",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "638d8f61-bbf6-4984-9bb2-1113ec91e75c",
+            "name": "getFuncionarios",
+            "url": "{{empresa}}/funcionario/all",
+            "method": "GET",
+            "sortNum": 12500,
+            "created": "2023-06-16T22:10:24.376Z",
+            "modified": "2023-06-16T22:10:24.376Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b23d046b-05eb-48a8-b1b9-6f921a0f8163",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "f9bd3a68-fab2-493b-8f53-3104618f95a6",
+            "name": "getDepartamentos",
+            "url": "{{empresa}}/departamento/all",
+            "method": "GET",
+            "sortNum": 12500,
+            "created": "2023-06-16T22:10:24.377Z",
+            "modified": "2023-06-16T22:10:24.377Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "94770741-c9bf-4de7-ab06-f81aa085145a",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "78b0e8ec-eb7f-4b17-8e5b-2c0c1d827677",
+            "name": "getProjeto",
+            "url": "{{empresa}}/projeto/542fdce0-0bf5-11ee-8c57-eba320c3c1c0",
+            "method": "GET",
+            "sortNum": 13750,
+            "created": "2023-06-16T22:10:24.378Z",
+            "modified": "2023-06-16T22:10:24.378Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6aa56cd5-8fb4-4298-9519-5b0cbb9d5afb",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "638d8f61-bbf6-4984-9bb2-1113ec91e75c",
+            "name": "getFuncionario",
+            "url": "{{empresa}}/funcionario/8efdb5a0-0b13-11ee-afd5-d75687cbe916",
+            "method": "GET",
+            "sortNum": 13750,
+            "created": "2023-06-16T22:10:24.379Z",
+            "modified": "2023-06-16T23:11:54.654Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b55563da-6bfa-411b-bd53-515c1af204d3",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "f9bd3a68-fab2-493b-8f53-3104618f95a6",
+            "name": "getDepartamento",
+            "url": "{{empresa}}/departamento/57b04cc0-0b13-11ee-afd5-d75687cbe916",
+            "method": "GET",
+            "sortNum": 13750,
+            "created": "2023-06-16T22:10:24.380Z",
+            "modified": "2023-06-16T22:48:56.425Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d717e46e-a2de-458b-9e9b-689402e5acf8",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "17607d71-3661-4eba-9e05-b97dc67e9ad4",
+            "name": "deleteDependente",
+            "url": "{{empresa}}/dependente/bfc9cec0-0b05-11ee-b0ed-c50c7a90f374",
+            "method": "DELETE",
+            "sortNum": 15000,
+            "created": "2023-06-16T22:10:24.381Z",
+            "modified": "2023-06-16T22:10:24.381Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5aac4ceb-ea82-4e2b-9153-39f0ba92b308",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "78b0e8ec-eb7f-4b17-8e5b-2c0c1d827677",
+            "name": "updateProjeto",
+            "url": "{{empresa}}/projeto/542fdce0-0bf5-11ee-8c57-eba320c3c1c0",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2023-06-16T22:10:24.382Z",
+            "modified": "2023-06-16T22:10:24.382Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"descricao\": \"Acessórios\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1f063a1e-dbdd-4273-886f-68f7fae7d065",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "638d8f61-bbf6-4984-9bb2-1113ec91e75c",
+            "name": "updateFuncionario",
+            "url": "{{empresa}}/funcionario/b9439b20-0bf6-11ee-8c57-eba320c3c1c0",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2023-06-16T22:10:24.383Z",
+            "modified": "2023-06-16T22:10:24.383Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"descricao\": \"Televisor LED 55 polegadas\",\n  \"preco\": \"2989.99\",\n  \"quantidade\": 12,\n  \"projetoId\": \"5ed5ff80-0bf5-11ee-8c57-eba320c3c1c0\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6466a665-fbb7-4455-b075-72f147930b1e",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "f9bd3a68-fab2-493b-8f53-3104618f95a6",
+            "name": "updateDepartamento",
+            "url": "{{empresa}}/departamento/57b04cc0-0b13-11ee-afd5-d75687cbe916",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2023-06-16T22:10:24.384Z",
+            "modified": "2023-06-16T22:58:32.698Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"gestorId\": \"977e0430-0c96-11ee-ba67-7b330b9599ed\",\n  \"projetoId\": \"624c0bd0-0c97-11ee-ba67-7b330b9599ed\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e5a668f8-4de9-4d0a-926a-0864c370402f",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "78b0e8ec-eb7f-4b17-8e5b-2c0c1d827677",
+            "name": "deleteProjeto",
+            "url": "{{empresa}}/projeto/3241fdb0-0bf6-11ee-8c57-eba320c3c1c0",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-06-16T22:10:24.385Z",
+            "modified": "2023-06-16T22:10:24.385Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "05d904c3-9587-4d7c-a273-b56cda6c6740",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "638d8f61-bbf6-4984-9bb2-1113ec91e75c",
+            "name": "deleteFuncionario",
+            "url": "{{empresa}}/funcionario/4fb3e380-0c6a-11ee-a0a7-91a912372f76",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-06-16T22:10:24.386Z",
+            "modified": "2023-06-16T22:10:24.386Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "86ab1a7a-9ef8-44d7-a3c3-d19767b4201e",
+            "colId": "898d946e-a81f-431c-904c-0336fa86e854",
+            "containerId": "f9bd3a68-fab2-493b-8f53-3104618f95a6",
+            "name": "deleteDepartamento",
+            "url": "{{empresa}}/departamento/5f38b8b0-0c94-11ee-ba67-7b330b9599ed",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-06-16T22:10:24.387Z",
+            "modified": "2023-06-16T22:32:16.444Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

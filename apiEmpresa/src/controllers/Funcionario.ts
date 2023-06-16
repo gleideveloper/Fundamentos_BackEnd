@@ -20,7 +20,7 @@ const getAll = async (req: Request, res: Response): Promise<Response> => {
     const funcionarios: { rows: Array<Funcionario>; count: number } =
       await Funcionario.findAndCountAll({
         include: [Dependente, Departamento],
-        // distinct: true,
+        distinct: true,
       });
     return res.status(200).json(funcionarios);
   } catch (error) {
@@ -33,7 +33,10 @@ const getAll = async (req: Request, res: Response): Promise<Response> => {
 const getById = async (req: Request, res: Response): Promise<Response> => {
   const { id } = req.params;
   try {
-    const funcionario: Funcionario | null = await Funcionario.findOne({ where: { id } });
+    const funcionario: Funcionario | null = await Funcionario.findOne({
+      where: { id },
+      include: [Dependente],
+    });
     if (!funcionario) {
       return res.status(404).json({ error: "Funcionário não encontrado." });
     }
