@@ -13,13 +13,13 @@ migracoes.set(1, {
   ],
 });
 
-// migracoes.set(2, {
-//   consultas: [
-//     {
-//       model: "Dependente",
-//       query: `ALTER TABLE Dependentes ADD telefone VARCHAR(45) NOT NULL DEFAULT "";`,
-//     },
-//   ],
-// });
+migracoes.set(2, {
+  consultas: [
+    {
+      model: "Dependente",
+      query: `ALTER TABLE Dependentes ADD telefone VARCHAR(45) NOT NULL DEFAULT "";`,
+    },
+  ],
+});
 
 export { migracoes };
