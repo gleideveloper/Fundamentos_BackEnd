@@ -8,18 +8,18 @@ migracoes.set(1, {
   consultas: [
     {
       model: "Dependente",
-      query: `ALTER TABLE Dependentes ADD atributo_adicionado VARCHAR(45);`,
+      query: `ALTER TABLE Dependentes ADD telefone VARCHAR(45);`,
     },
   ],
 });
 
-migracoes.set(2, {
-  consultas: [
-    {
-      model: "Dependente",
-      query: `ALTER TABLE Dependentes ADD atributo_adicionado_2 VARCHAR(45) NOT NULL DEFAULT "";`,
-    },
-  ],
-});
+// migracoes.set(2, {
+//   consultas: [
+//     {
+//       model: "Dependente",
+//       query: `ALTER TABLE Dependentes ADD telefone VARCHAR(45) NOT NULL DEFAULT "";`,
+//     },
+//   ],
+// });
 
 export { migracoes };

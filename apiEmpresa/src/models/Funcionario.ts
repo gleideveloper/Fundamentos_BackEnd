@@ -9,14 +9,14 @@ import {
   IsEmail,
   Unique,
   ForeignKey,
-  HasMany,
-  HasOne,
   BelongsTo,
+  HasMany,
 } from "sequelize-typescript";
 import { Departamento } from "./Departamento";
 import { Dependente } from "./Dependente";
+
 @Table({ timestamps: true })
-export class Funcionario extends Model<Funcionario> {
+export class Funcionario extends Model {
   @IsUUID("all")
   @PrimaryKey
   @Column({ type: DataType.UUID, defaultValue: DataType.UUIDV1 })
@@ -25,6 +25,10 @@ export class Funcionario extends Model<Funcionario> {
   @AllowNull(false)
   @Column({ type: DataType.STRING })
   name!: string;
+
+  @AllowNull(false)
+  @Column({ type: DataType.STRING })
+  endereco!: string;
 
   @AllowNull(false)
   @Column({ type: DataType.STRING })

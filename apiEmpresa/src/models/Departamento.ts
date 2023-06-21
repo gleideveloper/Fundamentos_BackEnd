@@ -18,7 +18,7 @@ import { Funcionario } from "./Funcionario";
 import { Projeto } from "./Projeto";
 
 @Table({ timestamps: true })
-export class Departamento extends Model<Departamento> {
+export class Departamento extends Model {
   @IsUUID("all")
   @PrimaryKey
   @Column({ type: DataType.UUID, defaultValue: DataType.UUIDV1 })

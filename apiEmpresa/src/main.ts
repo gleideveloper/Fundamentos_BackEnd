@@ -1,5 +1,5 @@
 import { Api } from "./server";
-import { api } from "./api.info";
+import { api } from "./api-info";
 
 const server = new Api();
 try {

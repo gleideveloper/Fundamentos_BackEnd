@@ -6,23 +6,20 @@ import {
   IsUUID,
   PrimaryKey,
   AllowNull,
-  Unique,
   ForeignKey,
-  HasOne,
   BelongsTo,
 } from "sequelize-typescript";
 
 import { Funcionario } from "./Funcionario";
 
 @Table({ timestamps: true })
-export class Dependente extends Model<Dependente> {
+export class Dependente extends Model {
   @IsUUID("all")
   @PrimaryKey
   @Column({ type: DataType.UUID, defaultValue: DataType.UUIDV1 })
   id!: string;
 
   @AllowNull(false)
-  @Unique
   @Column({ type: DataType.STRING })
   name!: string;
 
@@ -30,9 +27,9 @@ export class Dependente extends Model<Dependente> {
   @Column({ type: DataType.INTEGER })
   idade!: number;
 
-  // @AllowNull(true)
-  // @Column({ type: DataType.STRING })
-  // atributo_adicionado!: string;
+  @AllowNull(true)
+  @Column({ type: DataType.STRING })
+  telefone!: string;
 
   @ForeignKey(() => Funcionario)
   @AllowNull(false)

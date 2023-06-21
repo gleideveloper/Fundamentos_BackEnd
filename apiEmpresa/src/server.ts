@@ -5,7 +5,7 @@ import { VersaoDB } from "./models/VersaoDB";
 import { Departamento } from "./models/Departamento";
 import { Projeto } from "./models/Projeto";
 import { Dependente } from "./models/Dependente";
-import { api } from "./api.info";
+import { api } from "./api-info";
 import { error } from "console";
 import connection from "./db/config";
 import { migracoes, MigracaoDB } from "./db/migracoes";
