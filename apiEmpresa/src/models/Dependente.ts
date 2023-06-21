@@ -30,6 +30,10 @@ export class Dependente extends Model<Dependente> {
   @Column({ type: DataType.INTEGER })
   idade!: number;
 
+  // @AllowNull(true)
+  // @Column({ type: DataType.STRING })
+  // atributo_adicionado!: string;
+
   @ForeignKey(() => Funcionario)
   @AllowNull(false)
   @Column({ type: DataType.UUID })
